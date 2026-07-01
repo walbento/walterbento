@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de evolução — Engenheiro de Software em caminho para Arquitetura de Sistemas">
+  <title>Portfólio de Evolução — Walter Bento</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <span class="eyebrow">Portfólio de Evolução</span>
+      <h1>Walter Bento</h1>
+      <p class="subtitle">
+        Engenheiro de Software com <strong>sistema em produção</strong> e em evolução para
+        <strong>Arquitetura de Sistemas</strong> — resilientes, auditáveis e preparados para escala.
+      </p>
+      <div class="meta">
+        <span>Luanda, Angola</span>
+      </div>
+      <div class="cta">
+        <a href="mailto:waltbento@gmail.com" class="btn btn-primary">Entrar em contacto</a>
+        <a href="https://github.com/walbento?tab=repositories" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/walter-bento" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section>
+      <h2>O que já domino</h2>
+      <div class="skills">
+        <div class="skill-card">
+          <strong>Linguagens</strong>
+          JavaScript, TypeScript
+        </div>
+        <div class="skill-card">
+          <strong>Infraestrutura</strong>
+          Git, Docker, Docker Compose
+        </div>
+        <div class="skill-card">
+          <strong>Produção</strong>
+          E-commerce, catálogo, checkout, deploy real
+        </div>
+        <div class="skill-card">
+          <strong>Em aprendizagem</strong>
+          SOLID, TDD, PostgreSQL, RBAC
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Em produção</h2>
+      <p class="section-intro">
+        Software real, com utilizadores e transações.
+      </p>
+      <div class="project project-live">
+        <div class="project-header">
+          <div>
+            <div class="project-title">E-commerce</div>
+            <div class="project-domain">Loja online · Angola · utilizadores reais</div>
+          </div>
+          <span class="status status-live">Em produção</span>
+        </div>
+        <p>
+          Plataforma de comércio eletrónico completa: catálogo de produtos, carrinho, fluxo de checkout,
+          gestão de pedidos e experiência de compra em ambiente de produção.
+        </p>
+        <div class="tags">
+          <span class="tag">Produção</span>
+          <span class="tag">E-commerce</span>
+          <span class="tag">Checkout</span>
+          <span class="tag">→ Docker</span>
+          <span class="tag">→ TDD</span>
+          <span class="tag">→ Observabilidade</span>
+        </div>
+        <div class="project-links">
+          <a href="https://josdala.ao/" class="btn btn-primary link-ecommerce" target="_blank" rel="noopener noreferrer">Visitar loja</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Laboratório — evolução técnica</h2>
+      <p class="section-intro">
+        Projetos de estudo orientados a aplicacoes de alta escala.
+      </p>
+      <div class="project">
+        <div class="project-header">
+          <div>
+            <div class="project-title">01 — Payment Gateway</div>
+            <div class="project-domain">Domínio: Fintech / Banca · BAI, BFA, EMIS</div>
+          </div>
+          <span class="status status-active">Lab · v0.2</span>
+        </div>
+        <p>
+          API de transferências bancárias simulada. Processa pagamentos com validação de saldo,
+          rastreabilidade e execução 100% em containers Docker.
+        </p>
+        <div class="diagram">┌──────────┐     ┌──────────┐     ┌────────────┐
+│  Client  │────▶│   API    │────▶│ Repository │
+│  (HTTP)  │     │  (REST)  │     │ (InMemory) │
+└──────────┘     └──────────┘     └────────────┘
+
+Arquitetura alvo (Q3 2026):
+┌─────┐   ┌─────────────┐   ┌────────┐   ┌────────────┐
+│ API │──▶│ Application │──▶│ Domain │◀──│ PostgreSQL │
+└─────┘   └─────────────┘   └────────┘   └────────────┘</div>
+        <div class="tags">
+          <span class="tag">Docker</span>
+          <span class="tag">REST</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">→ SOLID</span>
+          <span class="tag">→ TDD</span>
+          <span class="tag">→ JWT/RBAC</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Roadmap de evolução</h2>
+      <p>O que está feito, o que está em curso e o que vem a seguir.</p>
+      <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Fase</th>
+            <th>Foco</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Q2 2026</td>
+            <td>E-commerce em produção + Docker + API REST</td>
+            <td><span class="status status-done">Em produção</span></td>
+          </tr>
+          <tr>
+            <td>Q3 2026</td>
+            <td>SOLID, camadas, TDD (&gt;80% cobertura)</td>
+            <td><span class="status status-next">Próximo</span></td>
+          </tr>
+          <tr>
+            <td>Q4 2026</td>
+            <td>PostgreSQL avançado + JWT/RBAC</td>
+            <td><span class="status status-future">Planeado</span></td>
+          </tr>
+          <tr>
+            <td>2027</td>
+            <td>Cloud, IaC, alta disponibilidade</td>
+            <td><span class="status status-future">Futuro</span></td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Sprint atual</h2>
+      <ul class="timeline">
+        <li>
+          <span class="check check-done">—</span>
+          <div class="timeline-text">
+            <strong>E-commerce no ar com fluxo de compra completo</strong>
+            <span>Catálogo, carrinho, checkout e pedidos em ambiente de produção</span>
+          </div>
+        </li>
+        <li>
+          <span class="check check-wip">—</span>
+          <div class="timeline-text">
+            <strong>Evoluir e-commerce — containerização e testes</strong>
+            <span>Docker, CI básico e cobertura de testes nos fluxos críticos</span>
+          </div>
+        </li>
+        <li>
+          <span class="check check-wip">—</span>
+          <div class="timeline-text">
+            <strong>Payment Gateway v0.3 — Clean Architecture (SOLID)</strong>
+            <span>Separar Domain → Application → Infrastructure → API</span>
+          </div>
+        </li>
+        <li>
+          <span class="check check-done">—</span>
+          <div class="timeline-text">
+            <strong>Endpoints REST + validação de saldo (lab)</strong>
+            <span>POST /transfers, GET /transfers/{id}, GET /accounts/{id}/balance</span>
+          </div>
+        </li>
+        <li>
+          <span class="check check-done">—</span>
+          <div class="timeline-text">
+            <strong>Docker multi-stage + docker-compose</strong>
+            <span>Imagem reduzida de 800MB para 120MB</span>
+          </div>
+        </li>
+        <li>
+          <span class="check check-todo">·</span>
+          <div class="timeline-text">
+            <strong>TDD com cobertura &gt; 80% (lab)</strong>
+            <span>Testes unitários do domínio + integração com Testcontainers</span>
+          </div>
+        </li>
+        <li>
+          <span class="check check-todo">·</span>
+          <div class="timeline-text">
+            <strong>JWT + RBAC (Operador, Auditor, Admin)</strong>
+            <span>Apenas Auditor acede a relatórios financeiros</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Próximos projetos do laboratório</h2>
+      <div class="projects">
+        <div class="project">
+          <div class="project-header">
+            <div>
+              <div class="project-title">02 — Telecom Data Pipeline</div>
+              <div class="project-domain">Domínio: Unitel, Africell</div>
+            </div>
+            <span class="status status-next">Planeado</span>
+          </div>
+          <p>Ingestão de CDRs, alertas de consumo de dados, PostgreSQL com particionamento.</p>
+          <div class="tags">
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">HATEOAS</span>
+            <span class="tag">Índices analíticos</span>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-header">
+            <div>
+              <div class="project-title">03 — IAM &amp; Audit Platform</div>
+              <div class="project-domain">Domínio: Setor público / Big Four</div>
+            </div>
+            <span class="status status-future">Futuro</span>
+          </div>
+          <p>Gestão de identidade corporativa, RBAC granular, logs de auditoria imutáveis.</p>
+          <div class="tags">
+            <span class="tag">RBAC</span>
+            <span class="tag">SBOM</span>
+            <span class="tag">Docker produção</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Lições aprendidas</h2>
+      <ul class="timeline">
+        <li>
+          <span class="check check-done">—</span>
+          <div class="timeline-text">
+            <strong>Produção real vale mais que dez projetos de tutorial</strong>
+            <span>O e-commerce no ar prova entrega, manutenção e responsabilidade com utilizadores</span>
+          </div>
+        </li>
+        <li>
+          <span class="check check-done">—</span>
+          <div class="timeline-text">
+            <strong>Idempotência desde o início (lab)</strong>
+            <span>Evita refactor doloroso quando chegar mensageria assíncrona</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      Portfólio de Evolução · Walter Bento ·
+      <a href="https://github.com/walbento?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub</a> ·
+      <a href="https://www.linkedin.com/in/walter-bento" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </div>
+  </footer>
+
+</body>
+</html>

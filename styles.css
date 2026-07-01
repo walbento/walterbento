@@ -1,0 +1,519 @@
+:root {
+  --bg: #f7f6f3;
+  --surface: #ffffff;
+  --border: #e2e0db;
+  --border-light: #eceae6;
+  --text: #1a1a1a;
+  --muted: #6b6b6b;
+  --muted-light: #9a9a9a;
+  --radius: 2px;
+  --font: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", sans-serif;
+  --mono: "SF Mono", "Menlo", "Consolas", monospace;
+  --max-width: 72rem;
+  --section-gap: 5rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+}
+
+a {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: opacity 0.2s ease;
+}
+
+a:hover {
+  opacity: 0.55;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 clamp(1.5rem, 5vw, 3rem);
+}
+
+/* —— Header —— */
+
+header {
+  padding: clamp(4rem, 12vw, 7rem) 0 clamp(3rem, 8vw, 5rem);
+  border-bottom: 1px solid var(--border);
+}
+
+.eyebrow {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  margin-bottom: 1.25rem;
+  max-width: 14ch;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: clamp(1.0625rem, 2vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: -0.015em;
+  max-width: 36rem;
+}
+
+.subtitle strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 2rem;
+  margin-top: 2.5rem;
+  font-size: 0.8125rem;
+  color: var(--muted-light);
+  letter-spacing: 0.02em;
+}
+
+.meta span:not(:last-child)::after {
+  content: none;
+}
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem 2rem;
+  margin-top: 2.5rem;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.btn:hover {
+  opacity: 0.55;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--text);
+  color: var(--surface);
+  padding: 0.75rem 1.75rem;
+  border-radius: 980px;
+  text-decoration: none;
+}
+
+.btn-ghost {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding: 0;
+  background: none;
+  border: none;
+}
+
+/* —— Sections —— */
+
+main {
+  padding-bottom: var(--section-gap);
+}
+
+section {
+  padding: var(--section-gap) 0 0;
+}
+
+section + section {
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 2rem;
+}
+
+p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+  max-width: 38rem;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+}
+
+.section-intro {
+  margin-bottom: 2.5rem;
+  max-width: 38rem;
+}
+
+/* —— Skills grid (functionalist) —— */
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+}
+
+.skill-card {
+  padding: 1.75rem 1.5rem;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.skill-card strong {
+  display: block;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--muted-light);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.75rem;
+}
+
+.skill-card {
+  font-size: 0.9375rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* —— Projects —— */
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.project {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 2.5rem;
+  margin-top: -1px;
+}
+
+.project:first-child {
+  margin-top: 0;
+}
+
+.project-live {
+  border-left: 3px solid var(--text);
+}
+
+.project-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  gap: 1rem 2rem;
+  margin-bottom: 1.25rem;
+}
+
+.project-title {
+  font-size: 1.375rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  color: var(--text);
+}
+
+.project-domain {
+  font-size: 0.8125rem;
+  color: var(--muted-light);
+  margin-top: 0.35rem;
+  letter-spacing: 0.01em;
+}
+
+.project p {
+  margin-bottom: 0;
+}
+
+.project-links {
+  margin-top: 2rem;
+}
+
+/* —— Status (text only, no pills) —— */
+
+.status {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.status-live {
+  color: var(--text);
+}
+
+.status-live::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--text);
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  position: relative;
+  top: -1px;
+}
+
+/* —— Tags (inline, functional) —— */
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0;
+  margin-top: 1.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.tag {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.tag:not(:last-child)::after {
+  content: "·";
+  margin: 0 0.625rem;
+  color: var(--border);
+}
+
+/* —— Table (Bauhaus grid) —— */
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: top;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+th {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--muted-light);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+td {
+  color: var(--text);
+}
+
+td:first-child {
+  font-variant-numeric: tabular-nums;
+  color: var(--muted);
+  width: 7rem;
+  white-space: nowrap;
+}
+
+td:nth-child(2) {
+  color: var(--muted);
+}
+
+td:last-child {
+  width: 9rem;
+  text-align: right;
+}
+
+td:last-child .status {
+  display: block;
+  text-align: right;
+}
+
+/* —— Timeline —— */
+
+.timeline {
+  list-style: none;
+  border-top: 1px solid var(--border);
+}
+
+.timeline li {
+  display: grid;
+  grid-template-columns: 1.5rem 1fr;
+  gap: 0 1.5rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--border-light);
+  align-items: start;
+}
+
+.timeline li:last-child {
+  border-bottom: none;
+}
+
+.check {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--muted-light);
+  padding-top: 0.15rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.check-done {
+  color: var(--text);
+}
+
+.check-wip {
+  color: var(--muted);
+}
+
+.check-todo {
+  color: var(--border);
+}
+
+.timeline-text strong {
+  display: block;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.01em;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-text span {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+/* —— Diagram —— */
+
+.diagram {
+  background: var(--bg);
+  border: 1px solid var(--border-light);
+  padding: 1.5rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  overflow-x: auto;
+  white-space: pre;
+  line-height: 1.6;
+  margin: 1.75rem 0 0;
+  letter-spacing: 0;
+}
+
+/* —— Footer —— */
+
+footer {
+  padding: 3rem 0 4rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.8125rem;
+  color: var(--muted-light);
+  letter-spacing: 0.01em;
+}
+
+footer a {
+  color: var(--muted);
+}
+
+/* —— Responsive —— */
+
+@media (max-width: 900px) {
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --section-gap: 3.5rem;
+  }
+
+  .skills {
+    grid-template-columns: 1fr;
+  }
+
+  .project {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .project-header {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .status {
+    justify-self: start;
+  }
+
+  th,
+  td {
+    padding: 0.875rem 1rem;
+    font-size: 0.8125rem;
+  }
+
+  td:last-child {
+    text-align: left;
+  }
+
+  td:last-child .status {
+    text-align: left;
+  }
+
+  .cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+  }
+}
