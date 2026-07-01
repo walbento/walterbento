@@ -196,6 +196,9 @@ p {
   border-right: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   background: var(--surface);
+  font-size: 0.9375rem;
+  color: var(--text);
+  line-height: 1.5;
 }
 
 .skill-card strong {
@@ -206,12 +209,6 @@ p {
   text-transform: uppercase;
   letter-spacing: 0.12em;
   margin-bottom: 0.75rem;
-}
-
-.skill-card {
-  font-size: 0.9375rem;
-  color: var(--text);
-  line-height: 1.5;
 }
 
 /* —— Projects —— */
